@@ -1,6 +1,8 @@
-body {
-    margin: 0;
-    padding: 0;
+.show-trigger { display: none; }
+.results { display: none; }
+#show:checked ~ .results { display: block; }
 
-    background: #292929;
-}
+.quiz:has(input[name="t1"][value="1"]:checked) .q1-res::after { color: green; content: "Верно"; }
+.quiz:has(input[name="t2"][value="1"]:checked) .q2-res::after { color: green; content: "Верно"; }
+.quiz:has(input[name="t3"][value="1"]:checked) .q3-res::after { color: green; content: "Верно"; }
+.quiz:has(input[name="t4"][value="1"]:checked) .q4-res::after { color: green; content: "Верно"; }
